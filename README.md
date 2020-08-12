@@ -126,7 +126,7 @@ python3 url_explorer.py -s https://bit.ly/ -e -p ./evidence_folder -w -v --click
 
 # Maintenance Related
     
-#TODO:
+    #TODO:
     1. Detect keyboard Ctrl+C for long loop cycles
     2. User-Agent randomization
     3. Word Freq analysis on web pages
@@ -134,7 +134,8 @@ python3 url_explorer.py -s https://bit.ly/ -e -p ./evidence_folder -w -v --click
     5. Create an argument for consuming hashes via file - targeted hash checks...
     6. Analytic improvements
     
-#DONE:
+    
+    #DONE:
     1. Auto platform geckodrive detection - DONE
     2. Implement a limit in case you do not want to run this infinitely. - DONE
     3. Implement command line args - DONE
