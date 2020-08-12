@@ -125,7 +125,8 @@ python3 url_explorer.py -s https://bit.ly/ -e -p ./evidence_folder -w -v --click
 
 
 # Maintenance Related
-    **#TODO:**
+    
+#TODO:
     1. Detect keyboard Ctrl+C for long loop cycles
     2. User-Agent randomization
     3. Word Freq analysis on web pages
@@ -133,7 +134,7 @@ python3 url_explorer.py -s https://bit.ly/ -e -p ./evidence_folder -w -v --click
     5. Create an argument for consuming hashes via file - targeted hash checks...
     6. Analytic improvements
     
-    **#DONE:**
+#DONE:
     1. Auto platform geckodrive detection - DONE
     2. Implement a limit in case you do not want to run this infinitely. - DONE
     3. Implement command line args - DONE
@@ -141,6 +142,6 @@ python3 url_explorer.py -s https://bit.ly/ -e -p ./evidence_folder -w -v --click
     5. Implement a Queue so that there is a limit to threads - DONE
     6. Create an output folder for the mission and logs - DONE
     7. Write the hashes to a file before exiting... - DONE [only in campaign mode]
-    8. Check if there is a list of checked hashes exists  hash:service if yes, load them up in to __CHECKED_HASH - DONE [only in campaign mode]
+    8. Check if there is a list of checked hashes exists  hash:service if yes, load them up in to `__CHECKED_HASH` - DONE [only in campaign mode]
     -- Keep the hashes per mission if the evidence path has the hash list, use it...
     9. Filters - for notifications for areas of interest (keywords) - DONE
