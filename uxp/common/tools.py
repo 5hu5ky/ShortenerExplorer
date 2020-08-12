@@ -85,17 +85,20 @@ class Tools(object):
             prompt = " [y/N] "
         else:
             raise ValueError("invalid answer: '%s'" % default)
-        
-        while True:
-                sys.stdout.write(query + prompt)
-                choice = input().lower()
-                if default is not None and choice == '':
-                    return valid[default]
-                elif choice in valid:
-                    return valid[choice]
-                else:
-                    sys.stdout.write("Please respond with 'yes' or 'no' "
-                                     "(or 'y' or 'n').\n")
+        try:
+            while True:
+                    sys.stdout.write(query + prompt)
+                    choice = input().lower()
+                    if default is not None and choice == '':
+                        return valid[default]
+                    elif choice in valid:
+                        return valid[choice]
+                    else:
+                        sys.stdout.write("Please respond with 'yes' or 'no' "
+                                         "(or 'y' or 'n').\n")
+        except:
+            print("Program abruptly exited!")
+            sys.exit(1)
     
     @staticmethod
     def directoryManager(basepath,missionpath=None, ask=True):
