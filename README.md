@@ -143,4 +143,4 @@ python3 url_explorer.py -s https://bit.ly/ -e -p ./evidence_folder -w -v --click
     7. Write the hashes to a file before exiting... - DONE [only in campaign mode]
     8. Check if there is a list of checked hashes exists  hash:service if yes, load them up in to __CHECKED_HASH - DONE [only in campaign mode]
     -- Keep the hashes per mission if the evidence path has the hash list, use it...
-    8. Filters - for notifications for areas of interest (keywords) - DONE
+    9. Filters - for notifications for areas of interest (keywords) - DONE
