@@ -3,7 +3,7 @@
 A simple utility for exploring URL shorteners safely.
 
 Step 1 - git clone
-`git clone https://github.com/5hu5ky/url_capture`
+`git clone https://github.com/5hu5ky/shortener_explorer`
 
 Step 2 - install dependencies
 
