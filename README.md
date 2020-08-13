@@ -5,7 +5,7 @@ A simple utility for exploring URL shorteners safely.
 Step 1 - git clone
 
 ```
-git clone https://github.com/5hu5ky/shortener_explorer
+git clone https://github.com/5hu5ky/ShortenerExplorer
 ```
 
 Step 2 - install geckodriver
