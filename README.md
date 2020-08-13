@@ -2,13 +2,13 @@
 
 A simple utility for exploring URL shorteners safely.
 
-Step 1 - git clone
+**Step 1** - git clone
 
 ```
 git clone https://github.com/5hu5ky/ShortenerExplorer
 ```
 
-Step 2 - install geckodriver
+**Step 2** - install geckodriver
 Since selenium deprecated phantomjs we are now using [geckodriver](https://github.com/mozilla/geckodriver). Download the [geckodriver](https://github.com/mozilla/geckodriver) for your system.
 
 For **Linux** add the download location to your user `$PATH`
@@ -47,7 +47,7 @@ _Assuming you downloaded geckodriver into `C:\bin\geckodriver`_
 
 See [usage](https://firefox-source-docs.mozilla.org/testing/geckodriver/Usage.html) for more details
 
-Step 3 - install dependencies
+**Step 3** - install dependencies
 
 ```
 pip3 install -r requirements.txt
