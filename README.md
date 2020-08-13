@@ -3,9 +3,51 @@
 A simple utility for exploring URL shorteners safely.
 
 Step 1 - git clone
-`git clone https://github.com/5hu5ky/shortener_explorer`
 
-Step 2 - install dependencies
+```
+git clone https://github.com/5hu5ky/shortener_explorer
+```
+
+Step 2 - install geckodriver
+Since selenium deprecated phantomjs we are now using [geckodriver](https://github.com/mozilla/geckodriver). Download the [geckodriver](https://github.com/mozilla/geckodriver) for your system.
+
+For **Linux** add the download location to your user `$PATH`
+
+_Assuming you downloaded geckodriver into `/home/user/bin`_
+
+```
+# export PATH=$PATH:/home/user/bin
+# whereis geckodriver
+geckodriver: /home/user/bin/geckodriver
+```
+
+or simply copy the geckodriver to /usr/local/bin (or create a symbolic link)
+
+```
+cp <geckodriver_path> /usr/local/bin
+chmod 755 /usr/local/bin/geckodriver
+```
+
+
+For **Windows** add the path where you downloaded the geckodriver into your `Environment Variables`
+- Run `SystemPropertiesAdvanced.exe` 
+- go to `Advanced` tab, 
+- click on `Environment Variables` 
+- Add the `path to your geckodriver` to the `Path` variable under the `System variables`
+
+or at the commandline type:
+
+```
+set PATH=%PATH%;C:\bin\geckodriver
+```
+
+_Assuming you downloaded geckodriver into `C:\bin\geckodriver`_
+
+
+
+See [usage](https://firefox-source-docs.mozilla.org/testing/geckodriver/Usage.html) for more details
+
+Step 3 - install dependencies
 
 ```
 pip3 install -r requirements.txt
@@ -65,6 +107,7 @@ optional arguments:
 ```
 
 ## Capabilities
+
 1. Explore Single URL - this can be any URL 
 2. Explore Service - service in this context is a link shortener service, when you choose this option you need to define a `limit` and ideally your target `hashlength`; the default hashlegnth is 6. 
 3. Conditional captures based on a single string or a list of search strings - helps filter out junk...
@@ -72,9 +115,9 @@ optional arguments:
 5. `clickthrough` - [Only for bit.ly pages] - if the site in question is marked as a spam site, bit.ly will display a message indicating this finding interrupting the scan, setting this option allows you to skip past this interruption.
 
 
-#Usage Examples
+# Usage Examples
 
-###Single URL screen capture - this can be a URL for shortener service or a regular URL
+### Single URL screen capture - this can be a URL for shortener service or a regular URL
 
 **Example regular URL:**
 
