@@ -43,7 +43,7 @@ class Tools(object):
                 return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
             except:
                 pass
-        
+        '''
         fpath = None
         fname = None
         try:
@@ -52,13 +52,14 @@ class Tools(object):
             pass
         
         if fpath in locals():
-            if is_exe(program):
-                return program
-            else:
-                for path in os.environ["PATH"].split(os.pathsep):
-                    exe_file = os.path.join(path, program)
-                    if is_exe(exe_file):
-                        return exe_file
+        '''
+        if is_exe(program):
+            return program
+        else:
+            for path in os.environ["PATH"].split(os.pathsep):
+                exe_file = os.path.join(path, program)
+                if is_exe(exe_file):
+                    return exe_file
 
         return None
     
