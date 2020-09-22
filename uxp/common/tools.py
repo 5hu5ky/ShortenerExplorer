@@ -43,16 +43,7 @@ class Tools(object):
                 return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
             except:
                 pass
-        '''
-        fpath = None
-        fname = None
-        try:
-            fpath, fname = os.path.split(program)
-        except:
-            pass
-        
-        if fpath in locals():
-        '''
+
         if is_exe(program):
             return program
         else:
@@ -112,15 +103,12 @@ class Tools(object):
                 response = True
             if response:
                 os.makedirs(basepath)
-                #evidencepath = basepath
+                
             else:
-                return False #print ("Writing to ".format(evidencepath))
+                return False 
             
-            #os.makedirs(basepath)
+           
         return basepath 
-    
-    
-
 
 
     @staticmethod

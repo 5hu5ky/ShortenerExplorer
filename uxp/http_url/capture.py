@@ -43,19 +43,19 @@ class getScreenShot(object):
             raise Exception("Save directory does not exist!")
         self.geckodriver = None
         
-        if Tools.get_platform()== "Windows":
+        if Tools.get_platform().lower() == "windows":
             ret, tmp = Tools.run_external("where geckodriver")
             if ret == 0:
                 self.geckodriver = str(tmp[0]).strip('\r')
 
-        elif Tools.get_platform()== "Linux":
+        elif Tools.get_platform().lower() == "linux":
             tmp = Tools.which("geckodriver")
             if tmp:
                 self.geckodriver = tmp
 
         
         if not self.geckodriver:
-            raise Exception("NO HEADLESS BROWSER")
+            raise Exception("NO HEADLESS BROWSER {} {}".format(Tools.which("geckodriver"),Tools.get_platform()))
             sys.exit(1)
             
 
